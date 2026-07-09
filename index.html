@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق إدارة المهام اليومية</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="app-header">
+            <h1>📋 إدارة المهام اليومية</h1>
+            <p class="subtitle">احفظ مهامك وتتبع إنجازاتك</p>
+        </div>
+
+        <div class="input-section">
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    placeholder="أضف مهمة جديدة..."
+                    class="task-input"
+                >
+                <button id="addBtn" class="add-btn">إضافة</button>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat">
+                <span class="stat-label">إجمالي المهام:</span>
+                <span id="totalTasks" class="stat-value">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">المهام المكتملة:</span>
+                <span id="completedTasks" class="stat-value">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">المتبقي:</span>
+                <span id="remainingTasks" class="stat-value">0</span>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <button class="filter-btn active" data-filter="all">الكل</button>
+            <button class="filter-btn" data-filter="active">غير مكتملة</button>
+            <button class="filter-btn" data-filter="completed">مكتملة</button>
+        </div>
+
+        <div id="tasksContainer" class="tasks-container">
+            <div class="empty-state">
+                <p>🎯 لا توجد مهام حالياً. أضف مهمة جديدة لتبدأ!</p>
+            </div>
+        </div>
+
+        <div class="action-section">
+            <button id="clearBtn" class="clear-btn">حذف جميع المهام المكتملة</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
