@@ -1,0 +1,13 @@
+model_list:
+  # 1. إعداد نموذج Google Gemini Flash
+  - model_name: my-gemini # الاسم الذي ستستدعيه في كود تطبيقك
+    litellm_params:
+      model: gemini/gemini-2.5-flash # النموذج الرسمي من جوجل
+      api_key: "ضع_مفتاح_API_الخاص_بجوجل_هنا"
+
+  # 2. إعداد نموذج Alibaba Qwen
+  - model_name: my-qwen # الاسم الذي ستستدعيه في كود تطبيقك
+    litellm_params:
+      model: openai/qwen2.5-coder # نستخدم صيغة openai لأن واجهة qwen متوافقة معها
+      api_key: "ضع_مفتاح_API_الخاص_بـ_qwen_هنا"
+      api_base: "https://dashscope.aliyuncs.com/compatible-mode/v1" # رابط سيرفر Qwen الرسمي
